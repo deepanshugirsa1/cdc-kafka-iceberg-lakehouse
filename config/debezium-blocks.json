@@ -1,0 +1,28 @@
+{
+  "name": "blocks-cdc",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "app",
+    "database.password": "app",
+    "database.dbname": "app",
+    "topic.prefix": "cdc",
+    "table.include.list": "public.blocks",
+    "plugin.name": "pgoutput",
+    "publication.name": "dbz_pub",
+    "slot.name": "dbz_blocks",
+    "snapshot.mode": "initial",
+    "tombstones.on.delete": "false",
+    "decimal.handling.mode": "double",
+    "time.precision.mode": "connect",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false",
+    "producer.override.compression.type": "lz4",
+    "producer.override.linger.ms": "20",
+    "max.batch.size": "8192",
+    "max.queue.size": "32768"
+  }
+}

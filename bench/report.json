@@ -1,0 +1,10 @@
+{
+  "batches": 11,
+  "merged_rows": 147382,
+  "wall_seconds": 56.93,
+  "events_per_sec_end_to_end": 2588.6,
+  "events_per_sec_in_merge": 4068.9,
+  "batch_latency_p50_s": 2.1,
+  "batch_latency_p95_s": 4.94,
+  "max_batch_rows": 24861
+}
